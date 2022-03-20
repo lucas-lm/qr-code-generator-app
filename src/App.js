@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <div className='page-content'>
-        <h1>QR Code Generator</h1>
+        <h1>Simple QR Code Generator</h1>
         <textarea 
           value={value} 
           onChange={e => setValue(e.target.value)} 
