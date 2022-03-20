@@ -22,7 +22,8 @@ function App() {
           onChange={e => setValue(e.target.value)} 
           className='text-input' 
           placeholder='Digite aqui'
-          rows={7}
+          rows={4}
+          autoFocus
         />
         <div className='output'>
           <QRCode value={value} renderAs='svg' size={240} className='qr-code-download'/>

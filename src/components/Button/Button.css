@@ -9,7 +9,7 @@
 }
 
 .action-button:hover {
-  border: 2px solid var(--light);
+  outline: 2px solid var(--light);
   background-color: var(--medium);
   cursor: pointer;
   color: var(--light);
