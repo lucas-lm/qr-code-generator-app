@@ -1,10 +1,17 @@
 import './App.css';
 import { useState } from "react";
 import QRCode from 'qrcode.react';
+import svgToImage from 'react-svg-to-image'
 import { Button } from './components';
 
 function App() {
   const [value, setValue] = useState('');
+
+  const downloadQRCode = () => {
+    svgToImage('svg.qr-code-download', 'qr-code', {
+      format: 'png'
+    })
+  }
 
   return (
     <div className="App">
@@ -18,10 +25,12 @@ function App() {
           rows={7}
         />
         <div className='output'>
-          <QRCode value={value} renderAs='svg' size={240}/>
+          <QRCode value={value} renderAs='svg' size={240} className='qr-code-download'/>
         </div>
         <div className='action'>
-          <Button>Download</Button>
+          <Button onClick={downloadQRCode}>
+            Download
+          </Button>
         </div>
       </div>
     </div>
