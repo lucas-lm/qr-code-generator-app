@@ -3,11 +3,43 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark: #333333;
+  --light: #d6d6d6;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: var(--light);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.App {
+  background-color: var(--dark);
+  min-height: 100vh;
+}
+
 .page-content {
   max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;
+}
+
+.text-input {
+  resize: none;
+  overflow: auto;
+  border: none;
+}
+
+.output {
+  text-align: center;
+}
+
+.action {
+  display: block;
 }
 
