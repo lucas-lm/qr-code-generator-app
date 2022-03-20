@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react";
 import QRCode from 'qrcode.react';
+import { Button } from './components';
 
 function App() {
   const [value, setValue] = useState('');
@@ -20,8 +21,7 @@ function App() {
           <QRCode value={value} renderAs='svg' size={240}/>
         </div>
         <div className='action'>
-          <button>Print</button>
-          <button>Download</button>
+          <Button>Download</Button>
         </div>
       </div>
     </div>

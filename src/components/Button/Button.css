@@ -1,0 +1,16 @@
+.action-button {
+  all: unset;
+  box-sizing: border-box;
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 8px 16px;
+  line-height: 1;
+  border-radius: 16px;
+}
+
+.action-button:hover {
+  border: 2px solid var(--light);
+  background-color: var(--medium);
+  cursor: pointer;
+  color: var(--light);
+}

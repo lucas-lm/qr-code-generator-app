@@ -5,6 +5,7 @@
 
 :root {
   --dark: #333333;
+  --medium: #858585;
   --light: #d6d6d6;
 }
 
@@ -40,6 +41,8 @@ h1 {
 }
 
 .action {
-  display: block;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
