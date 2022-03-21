@@ -16,17 +16,22 @@ function App() {
   return (
     <div className="App">
       <div className='page-content'>
-        <h1>Simple QR Code Generator</h1>
+        <h1>QR Code Generator</h1>
         <textarea 
           value={value} 
           onChange={e => setValue(e.target.value)} 
           className='text-input' 
           placeholder='Digite aqui'
-          rows={4}
+          rows={3}
           autoFocus
         />
         <div className='output'>
-          <QRCode value={value} renderAs='svg' size={240} className='qr-code-download'/>
+          <QRCode 
+            value={value} 
+            renderAs='svg' 
+            size={240} 
+            className='qr-code-download'
+          />
         </div>
         <div className='action'>
           <Button onClick={downloadQRCode}>
