@@ -31,7 +31,7 @@ function App() {
           value={value} 
           onChange={e => setValue(e.target.value)} 
           className='text-input' 
-          placeholder='Digite aqui'
+          placeholder='Enter here your URL'
           rows={3}
           autoFocus
         />
