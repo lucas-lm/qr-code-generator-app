@@ -1,11 +1,13 @@
 import './App.css';
 import { useState } from "react";
 import QRCode from 'qrcode.react';
-import svgToImage from 'react-svg-to-image'
+import svgToImage from 'react-svg-to-image';
+import DarkModeToggle from 'react-dark-mode-toggle'
 import { Button } from './components';
 
 function App() {
   const [value, setValue] = useState('');
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   const downloadQRCode = () => {
     svgToImage('svg.qr-code-download', 'qr-code', {
@@ -14,8 +16,16 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
       <div className='page-content'>
+        <div className='dark-mode-container'>
+          <DarkModeToggle
+            onChange={() => setIsDarkMode(isDark => !isDark)}
+            checked={isDarkMode}
+            size={64}
+          />
+          <span>Dark Mode</span>
+        </div>
         <h1>QR Code Generator</h1>
         <textarea 
           value={value} 

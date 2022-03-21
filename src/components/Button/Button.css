@@ -1,8 +1,8 @@
 .action-button {
   all: unset;
   box-sizing: border-box;
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--primary);
+  color: var(--background);
   padding: 8px 16px;
   line-height: 1;
   border-radius: 16px;
@@ -10,8 +10,8 @@
 }
 
 .action-button:hover {
-  outline: 2px solid var(--light);
-  background-color: var(--medium);
+  outline: 2px solid var(--primary);
+  background-color: var(--accent);
   cursor: pointer;
-  color: var(--light);
+  color: var(--primary);
 }
